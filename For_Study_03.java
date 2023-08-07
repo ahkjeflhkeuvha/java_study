@@ -27,9 +27,11 @@ class For_Study_03
 		Scanner sc = new Scanner(System.in);
 		String num = sc.next();
 		int sum = 0;
+		int num_int = Integer.parseInt(num);
 		
 		for(int i = 0; i<num.length(); i++){
-			sum += num.charAt(i)-48;
+			sum += num_int%10;
+			num_int/=10;
 		}
 		System.out.println(sum);
 	}
