@@ -76,17 +76,29 @@ class For_Study_03
 	
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
+//
+//		int ar[] = new int[num];
+//		ar[0] = 1;
+//		ar[1] = 1;
+//
+//		for(int i = 2; i<ar.length; i++){
+//			ar[i] = ar[i-2]+ar[i-1];
+//		}
+//
+//		for(int i = 0; i<ar.length; i++){
+//			System.out.print((i+1)+"번째 수열 : "+ar[i]+"\n");
+//		}
 
-		int ar[] = new int[num];
-		ar[0] = 1;
-		ar[1] = 1;
+		int num1 = 1;
+		int num2 = 1;
+		int num3 = 0;
+		System.out.print(num1 + " " + num2);
 
-		for(int i = 2; i<ar.length; i++){
-			ar[i] = ar[i-2]+ar[i-1];
-		}
-
-		for(int i = 0; i<ar.length; i++){
-			System.out.print((i+1)+"번째 수열 : "+ar[i]+"\n");
+		for(int i = 0; i<num-2; i++){
+			num3 = num1 + num2;
+			num1 = num2;
+			num2 = num3;
+			System.out.print(" "+num3);
 		}
 
 	}
