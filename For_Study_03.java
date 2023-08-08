@@ -111,19 +111,35 @@ class For_Study_03
 
 		// ** 향상된 for문 **
 
-		// 일반적인 for문
-		int arr[] = {10, 20, 30, 40, 50};
-		int sum = 0;
+//		// 일반적인 for문
+//		int arr[] = {10, 20, 30, 40, 50};
+//		int sum = 0;
 //		for(int i = 0; i<arr.length; i++){
 //			sum += arr[i];
 //		}
 //		System.out.println(sum);
+//
+//		// 향상된 for문 - Collection(배열) 클래스와 함께 사용 for(배열의 데이터 타입 : 배열 이름)
+//		for( int a : arr ){
+//			sum += a;
+//		}
+//		System.out.print(sum);
 
-		// 향상된 for문 - Collection(배열) 클래스와 함께 사용 for(배열의 데이터 타입 : 배열 이름)
-		for( int a : arr ){
-			sum += a;
-		}
-		System.out.println(sum);
+
 		
+
+		// 문제 5.  1에서 100 사이의 숫자 중에서 3의 배수이면서 5의 배수인 수의 갯수와 합을 출력하시오.
+
+		int count = 0, sum = 0;
+
+		for(int i = 1; i<=100; i++){
+			if(i%3 == 0 && i%5 == 0){
+				count++;
+				sum += i;
+				System.out.print(i+"    ");
+			}
+		}
+		System.out.println();
+		System.out.println("갯수 : "+count+"\n합 : "+sum);
 	}
 }
