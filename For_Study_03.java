@@ -74,8 +74,10 @@ class For_Study_03
 		
 		// 문제 4.  n번째 피보나치 수열 구하기
 	
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
+//		//내 방법
+//
+//		Scanner sc = new Scanner(System.in);
+//		int num = sc.nextInt();
 //
 //		int ar[] = new int[num];
 //		ar[0] = 1;
@@ -88,18 +90,40 @@ class For_Study_03
 //		for(int i = 0; i<ar.length; i++){
 //			System.out.print((i+1)+"번째 수열 : "+ar[i]+"\n");
 //		}
+//		
 
-		int num1 = 1;
-		int num2 = 1;
-		int num3 = 0;
-		System.out.print(num1 + " " + num2);
+//		// 규정쌤 방법
+//
+//		int num1 = 1;
+//		int num2 = 1;
+//		int num3 = 0;
+//		System.out.print(num1 + " " + num2);
+//
+//		for(int i = 0; i<num-2; i++){
+//			num3 = num1 + num2;
+//			num1 = num2;
+//			num2 = num3;
+//			System.out.print(" "+num3);
+//		}
 
-		for(int i = 0; i<num-2; i++){
-			num3 = num1 + num2;
-			num1 = num2;
-			num2 = num3;
-			System.out.print(" "+num3);
+
+
+
+		// ** 향상된 for문 **
+
+		// 일반적인 for문
+		int arr[] = {10, 20, 30, 40, 50};
+		int sum = 0;
+//		for(int i = 0; i<arr.length; i++){
+//			sum += arr[i];
+//		}
+//		System.out.println(sum);
+
+		// 향상된 for문 - Collection(배열) 클래스와 함께 사용 for(배열의 데이터 타입 : 배열 이름)
+		for( int a : arr ){
+			sum += a;
 		}
-
+		System.out.println(sum);
+		
 	}
 }
