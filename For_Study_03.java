@@ -47,17 +47,47 @@ class For_Study_03
 
 		
 		// 문제 3.  정수를 입력받아 각 자리의 합을 구하시오.
+
+//		Scanner sc = new Scanner(System.in);
+//		int num = sc.nextInt();
+//
+//		int num_1 = num;
+//		int num_2 = num;
+//		int sum_1 = 0;
+//		int sum_2 = 0;
+//
+//		while(true){
+//			sum_1 += num_1%10;
+//			num_1/=10;
+//			if(num_1== 0) break;
+// 		}
+//
+//		while(num_2 != 0){ // true, num>0도 가능
+//			sum_2 += num_2%10;
+//			num_2/=10;
+//		}
+//		System.out.println();
+//		System.out.println("조건문 자리에 (num != 0) : "+sum_1+"\n조건문 자리에 (num >  0) : "+sum_2);
+
+
+
+		
+		// 문제 4.  n번째 피보나치 수열 구하기
+	
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
-		int sum = 0;
 
-		while(true){
-			sum += num%10;
-			num/=10;
-			if(num== 0) break;
- 		}
+		int ar[] = new int[num];
+		ar[0] = 1;
+		ar[1] = 1;
 
-		System.out.println();
-		System.out.println("각 자리 수의 총 합 : "+sum);
+		for(int i = 2; i<ar.length; i++){
+			ar[i] = ar[i-2]+ar[i-1];
+		}
+
+		for(int i = 0; i<ar.length; i++){
+			System.out.print((i+1)+"번째 수열 : "+ar[i]+"\n");
+		}
+
 	}
 }
