@@ -73,9 +73,16 @@ public class RSPGame {
 			
 			System.out.print("com : " + print(com) + "my : "+ print(my));
 			
-			switch(my - com) {
-			case -2: case 1 : System.out.println("이겼당"); break;
-			case -1: case 2: System.out.println("졌땅"); break;
+//			switch(my - com) {
+//			case -2: case 1: System.out.println("이겼당"); break;
+//			case -1: case 2: System.out.println("졌땅"); break;
+//			case 0: System.out.println("비겼당"); break;
+//			}
+			
+			// 최상급 개발자 - 서큘러 알고리즘
+			switch((my-com + 3)%3) {
+			case 1:  System.out.println("이겼당"); break;
+			case 2:  System.out.println("졌땅"); break;
 			case 0: System.out.println("비겼당"); break;
 			}
 			
