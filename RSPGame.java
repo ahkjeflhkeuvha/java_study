@@ -2,6 +2,10 @@ import java.util.Scanner;
 
 public class RSPGame {
 
+	public static final int 가위 = 1;
+	public static final int 바위 = 2;
+	public static final int 보 = 3;
+	
 	public static void main(String[] args) {
 		// 가위 - 1 | 바위 - 2 | 보 - 3
 		Scanner sc = new Scanner(System.in);
@@ -55,10 +59,11 @@ public class RSPGame {
 //			}
 			
 			
-			// 중급 개발자 2
-			
+			// 중급 개발자 2 - static 메소드 사용
 			System.out.print("com : " + print(com) + "my : "+ print(my));
-			if((my == 1 && com == 3) || (my == 2 && com == 1) || (my == 3 && com == 2)) System.out.println("이겼땅~!");
+			
+			// 중급 개발자 3 - static 사용
+			if((my == 가위 && com == 보) || (my == 바위 && com == 가위) || (my == 보 && com == 바위)) System.out.println("이겼땅~!");
 			else if((my == com) || (my ==  com) || (my == com) ) System.out.println("비겼당");
 			else System.out.println("졌당");
 			
