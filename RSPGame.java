@@ -60,12 +60,24 @@ public class RSPGame {
 			
 			
 			// 중급 개발자 2 - static 메소드 사용
-			System.out.print("com : " + print(com) + "my : "+ print(my));
+//			System.out.print("com : " + print(com) + "my : "+ print(my));
 			
 			// 중급 개발자 3 - static 사용
-			if((my == 가위 && com == 보) || (my == 바위 && com == 가위) || (my == 보 && com == 바위)) System.out.println("이겼땅~!");
-			else if((my == com) || (my ==  com) || (my == com) ) System.out.println("비겼당");
-			else System.out.println("졌당");
+//			if((my == 가위 && com == 보) || (my == 바위 && com == 가위) || (my == 보 && com == 바위)) System.out.println("이겼땅~!");
+//			else if((my == com) || (my ==  com) || (my == com) ) System.out.println("비겼당");
+//			else System.out.println("졌당");
+			
+			
+			
+			// 상급 개발자
+			
+			System.out.print("com : " + print(com) + "my : "+ print(my));
+			
+			switch(my - com) {
+			case -2: case 1 : System.out.println("이겼당"); break;
+			case -1: case 2: System.out.println("졌땅"); break;
+			case 0: System.out.println("비겼당"); break;
+			}
 			
 			
 			System.out.print("계속하시겠습니까?   :     ");
